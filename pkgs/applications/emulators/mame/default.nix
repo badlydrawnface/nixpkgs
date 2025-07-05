@@ -37,14 +37,14 @@
 
 stdenv.mkDerivation rec {
   pname = "mame";
-  version = "0.277";
+  version = "0.278";
   srcVersion = builtins.replaceStrings [ "." ] [ "" ] version;
 
   src = fetchFromGitHub {
     owner = "mamedev";
     repo = "mame";
     rev = "mame${srcVersion}";
-    hash = "sha256-mGKTZ8/gvGQv9oXK4pgbJk580GAAXUS16hRQu4uHhdA=";
+    hash = "sha256-YJt+in9QV7a0tQZnfqFP3Iu6XQD0sryjud4FcgokYFg=";
   };
 
   outputs = [
@@ -123,8 +123,10 @@ stdenv.mkDerivation rec {
   # it is not possible to use substituteAll
   postPatch =
     ''
-      substituteInPlace src/emu/emuopts.cpp \
-        --subst-var-by mamePath "$out/opt/mame"
+      for file in src/emu/emuopts.cpp src/osd/modules/lib/osdobj_common.cpp; do
+        substituteInPlace "$file" \
+          --subst-var-by mamePath "$out/opt/mame"
+      done
     ''
     # MAME's build system uses `sw_vers` to test whether it needs to link with
     # the Metal framework or not. However:
