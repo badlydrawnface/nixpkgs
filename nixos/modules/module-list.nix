@@ -579,6 +579,7 @@
   ./services/development/athens.nix
   ./services/development/blackfire.nix
   ./services/development/bloop.nix
+  ./services/development/corteza.nix
   ./services/development/distccd.nix
   ./services/development/gemstash.nix
   ./services/development/hoogle.nix
@@ -929,6 +930,7 @@
   ./services/misc/taskchampion-sync-server.nix
   ./services/misc/taskserver
   ./services/misc/tautulli.nix
+  ./services/misc/tee-supplicant
   ./services/misc/tiddlywiki.nix
   ./services/misc/tp-auto-kbbl.nix
   ./services/misc/transfer-sh.nix
@@ -1412,6 +1414,7 @@
   ./services/search/hound.nix
   ./services/search/manticore.nix
   ./services/search/meilisearch.nix
+  ./services/search/nominatim.nix
   ./services/search/opensearch.nix
   ./services/search/qdrant.nix
   ./services/search/quickwit.nix
@@ -1595,6 +1598,7 @@
   ./services/web-apps/komga.nix
   ./services/web-apps/lanraragi.nix
   ./services/web-apps/lasuite-docs.nix
+  ./services/web-apps/lasuite-meet.nix
   ./services/web-apps/lemmy.nix
   ./services/web-apps/limesurvey.nix
   ./services/web-apps/mainsail.nix
@@ -1658,6 +1662,7 @@
   ./services/web-apps/screego.nix
   ./services/web-apps/selfoss.nix
   ./services/web-apps/sftpgo.nix
+  ./services/web-apps/sharkey.nix
   ./services/web-apps/shiori.nix
   ./services/web-apps/silverbullet.nix
   ./services/web-apps/simplesamlphp.nix
